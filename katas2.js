@@ -36,12 +36,16 @@ console.assert(power(3, 4) === 81, 'A função power não está funcionando como
 
 
 // comece a criar a sua função factorial na linha abaixo
-function factorial(){
-    
+function factorial(numero){
+    let result = 1
+    for(let i = 1;i <= numero; i++ ){
+        result = multiply(result, i)
+    }
+    return result
 }
 
 // descomente a linha seguinte para testar sua função
-// console.assert(factorial(5) === 120, 'A função factorial não está funcionando como esperado');
+console.assert(factorial(5) === 120, 'A função factorial não está funcionando como esperado');
 
 
 /**
