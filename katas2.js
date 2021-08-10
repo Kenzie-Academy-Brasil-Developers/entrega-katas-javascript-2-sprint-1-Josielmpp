@@ -53,7 +53,19 @@ console.assert(factorial(5) === 120, 'A função factorial não está funcionand
  */
 
 // crie a função fibonacci
+function fibonacci(numero){
+    
+    let n1 = 0
+    let n2 = 1
+    let soma = 0
 
+    for(let i = 1; i <= numero; i++){
+        soma = add(n1, n2)
+        n2 = n1 
+        n1 = soma
+    }
+    return n1
+}
 
 // descomente a linha seguinte para testar sua função
-// console.assert(fibonacci(7) === 13, 'A função fibonacci não está funcionando como esperado');
+console.assert(fibonacci(7) === 13, 'A função fibonacci não está funcionando como esperado');
